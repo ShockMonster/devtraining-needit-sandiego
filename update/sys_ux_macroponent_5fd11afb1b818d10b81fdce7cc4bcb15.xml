@@ -2192,10 +2192,7 @@
                         "apiName" : "x_58872_needit.UPDATE_LIST_QUERY_AND_TITLE",
                         "payload" : {
                           "type" : "JSON_LITERAL",
-                          "value" : {
-                            "heListQuery" : "state=14",
-                            "heListTitle" : "NeedIts Awaiting Approval"
-                          }
+                          "value" : { }
                         },
                         "sysId" : "3a48a5cb1b0fc11081868623604bcb7a"
                       },
@@ -2279,10 +2276,7 @@
                         "apiName" : "x_58872_needit.UPDATE_LIST_QUERY_AND_TITLE",
                         "payload" : {
                           "type" : "JSON_LITERAL",
-                          "value" : {
-                            "heListQuery" : "active=true",
-                            "heListTitle" : "Active NeedIts"
-                          }
+                          "value" : { }
                         },
                         "sysId" : "3a48a5cb1b0fc11081868623604bcb7a"
                       },
@@ -2366,10 +2360,7 @@
                         "apiName" : "x_58872_needit.UPDATE_LIST_QUERY_AND_TITLE",
                         "payload" : {
                           "type" : "JSON_LITERAL",
-                          "value" : {
-                            "heListQuery" : "state=3",
-                            "heListTitle" : "Closed NeedIt"
-                          }
+                          "value" : { }
                         },
                         "sysId" : "3a48a5cb1b0fc11081868623604bcb7a"
                       },
@@ -2611,19 +2602,8 @@
                       "event" : {
                         "apiName" : "x_58872_needit.UPDATE_LIST_QUERY_AND_TITLE",
                         "payload" : {
-                          "type" : "MAP_CONTAINER",
-                          "container" : {
-                            "heListQuery" : {
-                              "type" : "EVENT_PAYLOAD_BINDING",
-                              "binding" : {
-                                "address" : [ "value" ]
-                              }
-                            },
-                            "heListTitle" : {
-                              "type" : "JSON_LITERAL",
-                              "value" : null
-                            }
-                          }
+                          "type" : "JSON_LITERAL",
+                          "value" : { }
                         },
                         "sysId" : "3a48a5cb1b0fc11081868623604bcb7a"
                       },
@@ -2832,11 +2812,9 @@
               "value" : ""
             },
             "primaryValue" : {
-              "type" : "TRANSLATION_LITERAL",
-              "value" : {
-                "code" : null,
-                "message" : "My Next NeedIt",
-                "comment" : ""
+              "type" : "DATA_OUTPUT_BINDING",
+              "binding" : {
+                "address" : [ "add_user_to_text_string_1", "output" ]
               }
             },
             "subHeadingValue" : {
@@ -3049,6 +3027,24 @@
     }
   },
   "readEvaluationMode" : "EAGER"
+}, {
+  "definition" : {
+    "id" : "dd409e831bcfc11081868623604bcb6d",
+    "type" : "TRANSFORM"
+  },
+  "elementId" : "add_user_to_text_string_1",
+  "elementLabel" : "Add User to Text String 1",
+  "eventMappings" : [ ],
+  "inputValues" : {
+    "userFullName" : {
+      "type" : "CONTEXT_BINDING",
+      "binding" : {
+        "address" : [ "user", "fullName" ],
+        "category" : "session"
+      }
+    }
+  },
+  "readEvaluationMode" : "EAGER"
 } ]</data>
         <dispatched_events>270edb7b1b458d10b81fdce7cc4bcbea</dispatched_events>
         <extends display_value="Page Template">19be392623033300f4b4c50947bf65ba</extends>
@@ -3108,9 +3104,6 @@
   "comment" : ""
 }, {
   "message" : "List Options",
-  "comment" : ""
-}, {
-  "message" : "My Next NeedIt",
   "comment" : ""
 }, {
   "message" : "NeedIt",
@@ -3185,13 +3178,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-01-21 15:00:21</sys_created_on>
         <sys_id>5fd11afb1b818d10b81fdce7cc4bcb15</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Home</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_ux_macroponent_5fd11afb1b818d10b81fdce7cc4bcb15</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-04-28 16:50:02</sys_updated_on>
+        <sys_updated_on>2022-04-28 17:13:12</sys_updated_on>
     </sys_ux_macroponent>
 </record_update>
